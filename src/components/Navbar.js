@@ -6,7 +6,7 @@ const NavBar = props => {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-	    		<a className="navbar-brand">Not HackerNews</a>
+	    		<div className="navbar-brand">Not HackerNews</div>
 	    	</nav>
 	    	<NewsList/ >
 	    </div>
