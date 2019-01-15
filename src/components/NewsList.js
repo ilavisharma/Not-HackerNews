@@ -1,17 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchNewsAndId } from '../actions';
+import 'bootstrap/dist/css/bootstrap.css';
+import News from './News';
 
 class NewsList extends React.Component {
     componentDidMount() {
         this.props.fetchNewsAndId();
-        console.log(this.props.news);
+    }
+
+    renderAllNews() {
+        return this.props.news.map(news => {
+            return (
+                <News key={news.id} news={news} />
+            );
+        });
     }
 
     render() {
         return (
             <div>
-                NewsList
+                <ul className="list-group">
+                    {this.renderAllNews()}
+                </ul>
             </div>
         );
     }
@@ -19,7 +30,8 @@ class NewsList extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        newsList: state.news
+        newsList: state.news,
+        news: state.news
     };
 };
 
