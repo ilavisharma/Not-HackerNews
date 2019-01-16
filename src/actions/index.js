@@ -3,7 +3,7 @@ import hackerNews from '../apis/hackerNews';
 
 export const fetchNewsId = () => async dispatch => {
     const response = await hackerNews.get('/topstories.json?print=pretty');
-    response.data.length -= 470;
+    response.data.splice(20);
     dispatch({
         type: 'FETCH_NEWS_ID',
         payload: response.data

@@ -7,6 +7,11 @@ const NavBar = props => {
 		<div>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 	    		<div className="navbar-brand">Not HackerNews</div>
+	    		new |
+	    		comments |
+	    		show |
+	    		ask |
+	    		jobs
 	    	</nav>
 	    	<NewsList/ >
 	    </div>
