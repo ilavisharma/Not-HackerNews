@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import NewsList from './NewsList';
 
 class NavBar extends React.Component {
 	render() {
@@ -9,13 +8,14 @@ class NavBar extends React.Component {
 			<div>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 		    		<div className="navbar-brand">Not HackerNews</div>
-		    		<Link to="/" >new</Link> |
-		    		<Link to="/comments" >comments</Link> |
+		    		<Link to="/" >
+		    			new
+		    		</Link> |
+		    		comments|
 		    		show |
-		    		ask |
+		    		<Link to="/ask" >ask</Link> |
 		    		jobs
 		    	</nav>
-		    	<NewsList/ >
 		    </div>
 		);
 	}
