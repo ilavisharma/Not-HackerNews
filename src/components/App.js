@@ -1,9 +1,9 @@
 import React from 'react';
 import NavBar from './Navbar';
-import { Router, Route, Switch } from 'react-router-dom';
-import NewsList from './NewsList';
+import { Router, Route } from 'react-router-dom';
 import history from '../history';
-import CommentsList from './CommentsList';
+import NewsList from './News/NewsList';
+import AskList from './Ask/AskList';
 
 class App extends React.Component {
     render() {
@@ -11,11 +11,9 @@ class App extends React.Component {
             <div className="container">
                 <Router history={history}>
                     <div>
-                        <Switch>
-                            <NavBar />
-                            <Route path="/" exact component={NewsList} />
-                            <Route path="/comments" exact component={CommentsList} />
-                        </Switch>
+                        <NavBar />
+                        <Route path="/" exact component={NewsList} />
+                        <Route path="/ask" exact component={AskList} />
                     </div>
                 </Router>
             </div>
